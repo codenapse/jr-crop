@@ -269,7 +269,8 @@ function($ionicModal, $rootScope, $q) {
       height: 0,
       aspectRatio: 0,
       cancelText: 'Cancel',
-      chooseText: 'Choose'
+      chooseText: 'Choose',
+      template: template
     },
 
     crop: function(options) {
@@ -279,7 +280,7 @@ function($ionicModal, $rootScope, $q) {
 
       ionic.extend(scope, options);
 
-      scope.modal = $ionicModal.fromTemplate(template, {
+      scope.modal = $ionicModal.fromTemplate(options.template, {
         scope: scope
       });
 
